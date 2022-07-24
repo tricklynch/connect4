@@ -8,8 +8,14 @@ class Piece(Enum):
     BLACK = auto()
     EMPTY = auto()
 
-    def __repr__(self):
+    def __str__(self):
         return self.name[0]
+
+    def __repr__(self):
+        return self.name
+
+    def __next__(self):
+        return Piece.BLACK if Piece.RED == self else Piece.RED
 
 
 @dataclass
@@ -78,3 +84,9 @@ class Board:
 
     def __len__(self) -> int:
         return len(self.columns)
+
+    def __str__(self):
+        return "\n".join(
+            "".join(str(p) for p in row)
+            for row in [*zip(*self.columns, strict=True)][::-1]
+        )
