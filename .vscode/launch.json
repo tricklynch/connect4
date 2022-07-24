@@ -5,6 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Curses game",
+            "type": "python",
+            "request": "launch",
+            "module": "connect4",
+            "justMyCode": false,
+            "args": [
+                "curses"
+            ]
+        },
+        {
             "name": "Terminal game",
             "type": "python",
             "request": "launch",

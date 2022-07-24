@@ -4,9 +4,9 @@ from typing import Optional
 
 
 class Piece(Enum):
+    EMPTY = auto()
     RED = auto()
     BLACK = auto()
-    EMPTY = auto()
 
     def __str__(self):
         return self.name[0]

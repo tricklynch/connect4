@@ -1,7 +1,7 @@
 from connect4 import Board, Piece
 
 
-def play():
+def play(options):
     board = Board()
     turn = Piece.BLACK
     while (winner := board.get_winner()) is None:
