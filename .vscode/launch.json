@@ -5,6 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Terminal game",
+            "type": "python",
+            "request": "launch",
+            "module": "connect4",
+            "justMyCode": true,
+            "args": [
+                "term"
+            ]
+        },
+        {
             "name": "Unit tests",
             "type": "python",
             "request": "launch",
